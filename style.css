@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header { grid-area: header; }
+.ménu { grid-area: ménu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto  auto 1fr auto;
+    grid-template-areas:
+        'header header  header  header  header'
+        'ménu   ménu    ménu    ménu    ménu'
+        'main   main    main    main    main'
+        'footer footer  footer  footer  footer';
+    /*gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;*/
+}
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+    /* padding: 1rem; */
+    padding: 1rem 1rem 1rem 0rem;
+}
+
+.header {
+    background: linear-gradient(270deg, yellow, darkblue);
+    color: white;
+    text-align: center;
+
+    /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ménu {
+    background-color: rgb(28, 225, 22);
+}
+
+/* Menyen sitt design */
+nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display: flex;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    padding:1.5rem;
+    display: block;
+    border-right: 1px solid black;
+    display: inline;
+}
+/* extended box when hover problem */
+nav ul li a:hover{
+    background-color:rgb(21, 201, 21);
+}
+
+.main {
+    background-color: rgb(241, 12, 187)
+}
+
+.footer {
+    background: linear-gradient(red, black);
+    color: white;
+    text-align: center;
+}
