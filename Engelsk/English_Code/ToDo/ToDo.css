@@ -29,7 +29,7 @@ html, body {
 }
 
 .header {
-    background-image: url(BeachHeader.jpg);
+    background-image: url(Pictures/BeachHeader.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

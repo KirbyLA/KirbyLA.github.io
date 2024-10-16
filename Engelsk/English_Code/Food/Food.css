@@ -29,7 +29,7 @@ html, body {
 }
 
 .header {
-    background-image: url(Feast.avif);
+    background-image: url(Pictures/Feast.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
