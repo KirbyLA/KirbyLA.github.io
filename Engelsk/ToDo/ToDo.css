@@ -1,0 +1,135 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header { grid-area: header; }
+.ménu { grid-area: ménu; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header  header  header  header'
+        'ménu   main    main    main    main'
+        'footer footer  footer  footer  footer';
+    /*gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;*/
+}
+
+.grid-container > div { /* Alle barna til div-containeren av typen div */
+    font-size: 1.5rem;
+    padding: 0rem 1rem 0rem 0rem;
+}
+
+#forehead {
+    font-size: 400%;
+}
+
+.header {
+    background-image: url(BeachHeader.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 731px;
+    color: white;
+    text-align: center;
+
+    font-family: "Quando", serif;
+    font-weight: 400;
+    font-style: normal;
+    /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ménu {
+    background-color: #06B5AE;
+    text-align: center;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Menyen sitt design */
+nav ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width: 116%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    display: block;
+}
+
+nav ul li a:hover{
+    background-color: #03979e;
+}
+
+nav ul li a:hover:not(.active){
+    background-color: #24D3CB;
+}
+  
+.active {
+    background-color: #006666;
+    color: white;
+  }
+
+/* Side av text */
+.FlytL {
+    float: left;
+    display: block;
+    max-width: 400px;
+}
+
+.FlytR {
+    float: right;
+    display: block;
+    max-width: 400px;
+}
+/* Side av text */
+
+.main {
+    margin: 2%;
+    margin-top: 0%;
+}
+
+.main img {
+    width: 700px;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.footer {
+    background: linear-gradient(#06B5AE, black);
+    color: white;
+    text-align: center;
+}
+
+.cookies {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* Sentrerer */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.click {
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+}
