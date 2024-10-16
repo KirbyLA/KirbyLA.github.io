@@ -24,7 +24,15 @@
     } */
     
     /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
-    .flyt {
+    .FlytL {
+        float: none;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .FlytR {
         float: none;
         display: block;
         max-width: 100%;
