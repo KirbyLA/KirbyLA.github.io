@@ -17,11 +17,11 @@
         (frå column til row). I tillegg så midtstiller
         eg elementa i menyen.
     */
-    nav ul{
+    /* nav ul{
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
+    } */
     
     /* Når skjermen er liten, så vil biletet i main ta heile bredda. */
     .flyt {
