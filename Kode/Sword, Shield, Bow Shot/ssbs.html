@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sword, Shield, Bow Shot</title>
+    <link rel="stylesheet" href="ssbs.css">
+    <script src="ssbs.js" defer></script>
+    <!--\/ font \/-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Quando&display=swap" rel="stylesheet">
+    <!--/\ font /\-->
+</head>
+<body>
+
+    <h2 id="introText">Taking a twist on the classic "rock, paper, scissors", we are now in the medieval times! Click on one of your three options to try and defeat your enemy! But better keep an eye on your and your enemy's health. Once it runs out, you DIE...</h2>
+    
+    <div id="bot">
+        <h1 id="player">Bot</h1>
+        <progress id="botHealth" value="50" max="100"></progress>
+        <h2 class="sizeOfTextNeedSmolAreaRound" id="BotChoise"></h2>
+        <div id="botimgs">
+            <img id="BotSword" src="Images/Sword.svg" alt="Bot Sword">
+            <img id="BotShield" src="Images/Shield.svg" alt="Bot Shield">
+            <img id="BotBow" src="Images/Bow.svg" alt="Bot Bow">
+        </div> 
+    </div>
+    
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="SwordWin">Cut clean through!</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="ShieldWin">Invisible!</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="BowWin">Headshot!</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="SwordLoss">Camping...</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="ShieldLoss">Tis' but a scratch!</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="BowLoss">Hacker >:(</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="SwordTie">Clash of Clangs</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="ShieldTie">Watcha' Blockin'?</h2>
+    <h2 class="sizeOfTextNeedSmolAreaRound" id="BowTie">Double Kill!</h2>
+    
+    <h1 id="Win">Victory!</h1>
+    <h1 id="Loss">Game Over...</h1>
+    <h1 id="Tie">How?</h1>
+    <!-- <h2 id="result"></h2> -->
+    <button id="Restart">Next Round</button>
+    <button id="Replay">Play again?</button>
+
+    <div id="You">
+        <h1 id="player">You</h1>
+        <progress id="health" value="80" max="100"></progress>
+        <h2 class="sizeOfTextNeedSmolAreaRound" id="YourChoise"></h2>
+        <div id="yourimgs">
+            <img id="Sword" src="Images/Sword.svg" alt="Sword">
+            <img id="Shield" src="Images/Shield.svg" alt="Shield">
+            <img id="Bow" src="Images/Bow.svg" alt="Bow">
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar -->
