@@ -17,3 +17,39 @@ Img {
     transform: translate(-50%, -50%);
     width: 30%;
 }
+
+#plank {
+    z-index: 1;
+    top: 32%;
+    width: 35%;
+}
+
+#stripOfWood {
+    z-index: 1;
+    top: 65%;
+    width: 35%;
+}
+
+#board {
+    z-index: 1;
+    top: 47%;
+    width: 35%;
+}
+
+#crowbar {
+    position: absolute;
+    cursor: move;
+    z-index: 2;
+    top: 100%;
+    left: 10%;
+    width: 10%;
+}
+
+#crowbarUse {
+    position: absolute;
+    cursor: move;
+    z-index: 2;
+    top: 100%;
+    left: 10%;
+    width: 10%;
+}
