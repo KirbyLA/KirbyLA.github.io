@@ -46,8 +46,6 @@ Img {
 }
 
 #crowbarUse {
-    position: absolute;
-    cursor: move;
     z-index: 2;
     top: 100%;
     left: 10%;
