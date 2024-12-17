@@ -11,6 +11,10 @@ let T9 = document.getElementById("talk9");
 let T10 = document.getElementById("talk10");
 let T11 = document.getElementById("talk11");
 let T12 = document.getElementById("talk12");
+let T13 = document.getElementById("talk13");
+let T14 = document.getElementById("talk14");
+let T15 = document.getElementById("talk15");
+let T16 = document.getElementById("talk16");
 // henter dialog elementene fra html /\
 
 // skuler dialog som ikke er i bruk \/
@@ -25,6 +29,10 @@ T9.style.display = "none";
 T10.style.display = "none";
 T11.style.display = "none";
 T12.style.display = "none";
+T13.style.display = "none";
+T14.style.display = "none";
+T15.style.display = "none";
+T16.style.display = "none";
 // skuler dialog som ikke er i bruk /\
 
 // får tilgang til fremtidige props fra html \/
@@ -111,10 +119,6 @@ function knappKlikket() {
 
         T9.style.display = "none";
 
-    } else if (clickCount == 11) {
-
-        crowbar.style.display = "block";
-
     } else if (clickCount == 13) {
 
         T10.style.display = "block";
@@ -127,6 +131,7 @@ function knappKlikket() {
 
             T10.style.display = "none";
             T11.style.display = "block";
+            crowbar.style.display = "block";
 
             setTimeout(waitToTalk2, 7000);
             function waitToTalk2() {
@@ -141,6 +146,25 @@ function knappKlikket() {
                 }
             }
         }
+    } else if (clickCount == 20) {
+
+        T13.style.display = "block";
+
+    } else if (clickCount == 21) {
+
+        T13.style.display = "none";
+        T14.style.display = "block";
+
+    } else if (clickCount == 22) {
+
+        T14.style.display = "none";
+        T15.style.display = "block";
+
+    } else if (clickCount == 23) {
+
+        T15.style.display = "none";
+        T16.style.display = "block";
+
     }
 }    // changes events that happen after clicking the button /\
 
