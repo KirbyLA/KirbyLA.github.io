@@ -15,6 +15,10 @@ let T13 = document.getElementById("talk13");
 let T14 = document.getElementById("talk14");
 let T15 = document.getElementById("talk15");
 let T16 = document.getElementById("talk16");
+let T17 = document.getElementById("talk17");
+let T18 = document.getElementById("talk18");
+let T19 = document.getElementById("talk19");
+let T20 = document.getElementById("talk20");
 // henter dialog elementene fra html /\
 
 // skuler dialog som ikke er i bruk \/
@@ -33,6 +37,10 @@ T13.style.display = "none";
 T14.style.display = "none";
 T15.style.display = "none";
 T16.style.display = "none";
+T17.style.display = "none";
+T18.style.display = "none";
+T19.style.display = "none";
+T20.style.display = "none";
 // skuler dialog som ikke er i bruk /\
 
 // får tilgang til fremtidige props fra html \/
@@ -164,6 +172,26 @@ function knappKlikket() {
 
         T15.style.display = "none";
         T16.style.display = "block";
+
+    } else if (clickCount == 24) {
+
+        T16.style.display = "none";
+        T17.style.display = "block";
+
+    } else if (clickCount == 25) {
+
+        T17.style.display = "none";
+        T18.style.display = "block";
+
+    } else if (clickCount == 26) {
+
+        T18.style.display = "none";
+        T19.style.display = "block";
+
+    } else if (clickCount == 27) {
+
+        T19.style.display = "none";
+        T20.style.display = "block";
 
     }
 }    // changes events that happen after clicking the button /\
