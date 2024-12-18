@@ -19,6 +19,7 @@ let T17 = document.getElementById("talk17");
 let T18 = document.getElementById("talk18");
 let T19 = document.getElementById("talk19");
 let T20 = document.getElementById("talk20");
+let T21 = document.getElementById("talk21");
 // henter dialog elementene fra html /\
 
 // skuler dialog som ikke er i bruk \/
@@ -41,22 +42,27 @@ T17.style.display = "none";
 T18.style.display = "none";
 T19.style.display = "none";
 T20.style.display = "none";
+T21.style.display = "none";
 // skuler dialog som ikke er i bruk /\
 
 // får tilgang til fremtidige props fra html \/
 let plank = document.getElementById("plank");
 let stripOfWood = document.getElementById("stripOfWood");
 let board = document.getElementById("board");
-let crowbar = document.getElementById("crowbar");
+let divCrowbar = document.getElementById("divCrowbar");
+let mainCrowbar = document.getElementById("mainCrowbar");
 let crowbarUse = document.getElementById("crowbarUse");
+let metalPlate = document.getElementById("metalPlate");
 // får tilgang til fremtidige props fra html \/
 
 // hjemmer props til de trengs \/
 plank.style.display = "none";
 stripOfWood.style.display = "none";
 board.style.display = "none";
-crowbar.style.display = "none";
+divCrowbar.style.display = "none";
+mainCrowbar.style.display = "none";
 crowbarUse.style.display = "none";
+metalPlate.style.display = "none";
 // hjemmer props til de trengs /\
 
 // tar tilgang til knappen i html \/
@@ -71,6 +77,10 @@ knappTrykk.style.display = "none";
 // setter mengde klikk \/
 let clickCount = 0;
 // setter mengde klikk /\
+
+// if crowbar is on planks, it removes them \/
+let crowbarActive = true;
+// if crowbar is on planks, it removes them /\
 
 // Hva som kjer når man klikker knappen \/
 knapp.addEventListener("click", knappKlikket);
@@ -126,10 +136,15 @@ function knappKlikket() {
     } else if (clickCount == 9) {
 
         T9.style.display = "none";
-
-    } else if (clickCount == 13) {
-
         T10.style.display = "block";
+
+    } else if (clickCount == 10) {
+
+        T10.style.display = "none";
+
+    } else if (clickCount == 14) {
+
+        T11.style.display = "block";
         plank.style.display = "block";
         stripOfWood.style.display = "block";
         board.style.display = "block";
@@ -137,63 +152,69 @@ function knappKlikket() {
         setTimeout(waitToTalk1, 3500)
         function waitToTalk1() {
 
-            T10.style.display = "none";
-            T11.style.display = "block";
-            crowbar.style.display = "block";
+            T11.style.display = "none";
+            T12.style.display = "block";
 
-            setTimeout(waitToTalk2, 7000);
+            setTimeout(waitToTalk2, 6500);
             function waitToTalk2() {
 
-                T11.style.display = "none";
-                T12.style.display = "block";
+                T12.style.display = "none";
+                T13.style.display = "block";
 
                 setTimeout(waitToTalk3, 5500);
                 function waitToTalk3() {
 
-                    T12.style.display = "none";
+                    T13.style.display = "none";
+                    divCrowbar.style.display = "block";
+                    mainCrowbar.style.display = "block";
                 }
             }
         }
     } else if (clickCount == 20) {
 
-        T13.style.display = "block";
-
-    } else if (clickCount == 21) {
-
-        T13.style.display = "none";
         T14.style.display = "block";
 
-    } else if (clickCount == 22) {
+    } else if (clickCount == 21) {
 
         T14.style.display = "none";
         T15.style.display = "block";
 
-    } else if (clickCount == 23) {
+    } else if (clickCount == 22) {
 
         T15.style.display = "none";
         T16.style.display = "block";
 
-    } else if (clickCount == 24) {
+    } else if (clickCount == 23) {
 
         T16.style.display = "none";
         T17.style.display = "block";
 
-    } else if (clickCount == 25) {
+    } else if (clickCount == 24) {
 
         T17.style.display = "none";
         T18.style.display = "block";
 
-    } else if (clickCount == 26) {
+    } else if (clickCount == 25) {
 
         T18.style.display = "none";
         T19.style.display = "block";
 
-    } else if (clickCount == 27) {
+    } else if (clickCount == 26) {
 
         T19.style.display = "none";
         T20.style.display = "block";
 
-    }
+    } else if (clickCount == 27) {
+
+        T20.style.display = "none";
+        T21.style.display = "block";
+
+    } else if (clickCount == 28) {
+
+        T21.style.display = "none";
+        // T20.style.display = "block";
+
+    } // ide: flytt mus når for nær
 }    // changes events that happen after clicking the button /\
 
 function knappRetur() { // tilbake stiler knappens posisjon etter vis tid (setInterval)
@@ -201,3 +222,44 @@ function knappRetur() { // tilbake stiler knappens posisjon etter vis tid (setIn
     knapp.style.display = "block";
 }
 // Hva som kjer når man klikker knappen /\
+
+// gjøre kubeinet bevegelig med å dra den med musen \/
+document.addEventListener("DOMContentLoaded", () => {
+    const draggableElement = document.getElementById("divCrowbar");
+    const header = document.getElementById("mainCrowbar");
+
+    header.addEventListener("mousedown", dragMouseDown);
+
+    function dragMouseDown(e) {
+        e.preventDefault();
+        let pos3 = e.clientX;
+        let pos4 = e.clientY;
+
+        crowbarActive = false;
+
+        document.addEventListener("mousemove", elementDrag);
+        document.addEventListener("mouseup", closeDragElement);
+
+        function elementDrag(e) {
+            e.preventDefault();
+            const pos1 = pos3 - e.clientX;
+            const pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            draggableElement.style.top = (draggableElement.offsetTop - pos2) + "px";
+            draggableElement.style.left = (draggableElement.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.removeEventListener("mousemove", elementDrag);
+            document.removeEventListener("mouseup", closeDragElement);
+
+            crowbarActive = true;
+
+            // while (crowbarActive = true && ) {
+                
+            // }
+        }
+    }
+});
+// gjøre kubeinet bevegelig med å dra den med musen /\
