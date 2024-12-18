@@ -142,12 +142,18 @@ function knappKlikket() {
 
         T10.style.display = "none";
 
-    } else if (clickCount == 14) {
+    } else if (clickCount == 11) {
+
+        board.style.display = "block";
+
+    } else if (clickCount == 13) {
+
+        stripOfWood.style.display = "block";
+
+    } else if (clickCount == 15) {
 
         T11.style.display = "block";
         plank.style.display = "block";
-        stripOfWood.style.display = "block";
-        board.style.display = "block";
 
         setTimeout(waitToTalk1, 3500)
         function waitToTalk1() {
