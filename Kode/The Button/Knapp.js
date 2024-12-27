@@ -49,9 +49,11 @@ T21.style.display = "none";
 let plank = document.getElementById("plank");
 let stripOfWood = document.getElementById("stripOfWood");
 let board = document.getElementById("board");
+
 let divCrowbar = document.getElementById("divCrowbar");
 let mainCrowbar = document.getElementById("mainCrowbar");
 let crowbarUse = document.getElementById("crowbarUse");
+
 let metalPlate = document.getElementById("metalPlate");
 // får tilgang til fremtidige props fra html \/
 
@@ -59,9 +61,11 @@ let metalPlate = document.getElementById("metalPlate");
 plank.style.display = "none";
 stripOfWood.style.display = "none";
 board.style.display = "none";
+
 divCrowbar.style.display = "none";
 mainCrowbar.style.display = "none";
 crowbarUse.style.display = "none";
+
 metalPlate.style.display = "none";
 // hjemmer props til de trengs /\
 
@@ -81,6 +85,26 @@ let clickCount = 0;
 // if crowbar is on planks, it removes them \/
 let crowbarActive = true;
 // if crowbar is on planks, it removes them /\
+
+// Get's Position Data From Elements \/
+// get's position data from element: plank \/
+let plankPosition = plank.getBoundingClientRect();
+// get's position data from element: plank /\
+
+// get's position data from element: stripOfWood \/
+let stripOfWoodPosition = stripOfWood.getBoundingClientRect();
+
+let stripOfWoodX = stripOfWoodPosition.left + window.scrollX;
+let stripOfWoodY = stripOfWoodPosition.top + window.scrollY;
+
+console.log(document.getElementById("stripOfWood"));
+console.log(stripOfWoodX, " ", stripOfWoodY);
+// get's position data from element: stripOfWood /\
+
+// get's position data from element: board \/
+let boardPosition = board.getBoundingClientRect();
+// get's position data from element: board /\
+// Get's Position Data From Elements /\
 
 // Hva som kjer når man klikker knappen \/
 knapp.addEventListener("click", knappKlikket);
@@ -149,6 +173,7 @@ function knappKlikket() {
     } else if (clickCount == 13) {
 
         stripOfWood.style.display = "block";
+        console.log(stripOfWoodX, " ", stripOfWoodY);
 
     } else if (clickCount == 15) {
 
