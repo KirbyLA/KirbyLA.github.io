@@ -12,6 +12,7 @@ let T10 = document.getElementById("talk10");
 let T11 = document.getElementById("talk11");
 let T12 = document.getElementById("talk12");
 let T13 = document.getElementById("talk13");
+let SE1 = document.getElementById("soundEffect1");
 let T14 = document.getElementById("talk14");
 let T15 = document.getElementById("talk15");
 let T16 = document.getElementById("talk16");
@@ -35,6 +36,7 @@ T10.style.display = "none";
 T11.style.display = "none";
 T12.style.display = "none";
 T13.style.display = "none";
+SE1.style.display = "none";
 T14.style.display = "none";
 T15.style.display = "none";
 T16.style.display = "none";
@@ -186,18 +188,27 @@ function knappKlikket() {
             T11.style.display = "none";
             T12.style.display = "block";
 
-            setTimeout(waitToTalk2, 6500);
+            setTimeout(waitToTalk2, 6250);
             function waitToTalk2() {
 
                 T12.style.display = "none";
                 T13.style.display = "block";
 
-                setTimeout(waitToTalk3, 5500);
+                setTimeout(waitToTalk3, 5250);
                 function waitToTalk3() {
 
                     T13.style.display = "none";
-                    divCrowbar.style.display = "block";
-                    mainCrowbar.style.display = "block";
+                    SE1.style.display = "block";
+                    
+                    
+                    setTimeout(soundEffect1, 450);
+                    function soundEffect1() {
+
+                        SE1.style.display = "none";
+                        divCrowbar.style.display = "block";
+                        mainCrowbar.style.display = "block";
+
+                    }
                 }
             }
         }
