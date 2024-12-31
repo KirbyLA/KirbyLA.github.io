@@ -8,6 +8,10 @@ h1 {
     text-align: center;
 }
 
+#soundEffect1 {
+    font-size: 45px;
+}
+
 Img {
     margin: 0;
     position: absolute;
