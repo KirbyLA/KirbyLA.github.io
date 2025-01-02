@@ -51,3 +51,7 @@ Img {
     cursor: move;
     z-index: 3;
 }
+
+#clickCountDisplay {
+    text-align: center;
+}
