@@ -8,6 +8,10 @@ h1 {
     text-align: center;
 }
 
+#clickCountDisplay {
+    text-align: center;
+}
+
 #soundEffect1 {
     font-size: 45px;
 }
@@ -50,8 +54,4 @@ Img {
 #mainCrowbar {
     cursor: move;
     z-index: 3;
-}
-
-#clickCountDisplay {
-    text-align: center;
 }
