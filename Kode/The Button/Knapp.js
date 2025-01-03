@@ -59,63 +59,6 @@ let crowbarUse = document.getElementById("crowbarUse");
 let metalPlate = document.getElementById("metalPlate");
 // får tilgang til fremtidige props fra html \/
 
-// Get's Position Data From Elements \/
-// get's position data from element: plank \/
-let plankPosition = plank.getBoundingClientRect();
-
-let plankX = plankPosition.left + window.scrollX;
-let plankY = plankPosition.top + window.scrollY;
-
-console.log(plank.getBoundingClientRect())
-console.log(document.getElementById("plank"));
-console.log(plankX, " ", plankY);
-// get's position data from element: plank /\
-
-// get's position data from element: stripOfWood \/
-let stripOfWoodPosition = stripOfWood.getBoundingClientRect();
-
-let stripOfWoodX = stripOfWoodPosition.left + window.scrollX;
-let stripOfWoodY = stripOfWoodPosition.top + window.scrollY;
-
-console.log(stripOfWood.getBoundingClientRect())
-console.log(document.getElementById("stripOfWood"));
-console.log(stripOfWoodX, " ", stripOfWoodY);
-// get's position data from element: stripOfWood /\
-
-// get's position data from element: board \/
-let boardPosition = board.getBoundingClientRect();
-
-let boardX = boardPosition.left + window.scrollX;
-let boardY = boardPosition.top + window.scrollY;
-
-console.log(board.getBoundingClientRect())
-console.log(document.getElementById("board"));
-console.log(boardX, " ", boardY);
-// get's position data from element: board /\
-
-// get's position data from element: divCrowbar \/
-let divCrowbarPosition = divCrowbar.getBoundingClientRect();
-
-let divCrowbarX = divCrowbarPosition.left + window.scrollX;
-let divCrowbarY = divCrowbarPosition.top + window.scrollY;
-
-console.log(divCrowbar.getBoundingClientRect())
-console.log(document.getElementById("divCrowbar"));
-console.log(divCrowbarX, " ", divCrowbarY);
-// get's position data from element: divCrowbar /\
-
-// get's position data from element: mainCrowbar \/
-let mainCrowbarPosition = mainCrowbar.getBoundingClientRect();
-
-let mainCrowbarX = mainCrowbarPosition.left + window.scrollX;
-let mainCrowbarY = mainCrowbarPosition.top + window.scrollY;
-
-console.log(mainCrowbar.getBoundingClientRect())
-console.log(document.getElementById("mainCrowbar"));
-console.log(mainCrowbarX, " ", mainCrowbarY);
-// get's position data from element: mainCrowbar /\
-// Get's Position Data From Elements /\
-
 // hjemmer props til de trengs \/
 plank.style.display = "none";
 stripOfWood.style.display = "none";
@@ -289,18 +232,22 @@ function knappKlikket() {
 
         T19.style.display = "none";
         T20.style.display = "block";
+        metalPlate.style.display = "block";
 
-    } else if (clickCount == 27) {
+        setTimeout(waitToTalk4, 900)
+        function waitToTalk4() {
 
-        T20.style.display = "none";
-        T21.style.display = "block";
+            T20.style.display = "none";
+            T21.style.display = "block";
 
-    } else if (clickCount == 28) {
+            setTimeout(waitToTalk5, 1500)
+            function waitToTalk5() {
 
-        T21.style.display = "none";
-        // T20.style.display = "block";
+                T21.style.display = "none";
 
-    } // ide: flytt mus når for nær
+            }
+        }
+    }  // ide: flytt mus når for nær
 }    // changes events that happen after clicking the button /\
 
 function knappRetur() { // tilbake stiler knappens posisjon etter vis tid (setInterval)
@@ -308,6 +255,63 @@ function knappRetur() { // tilbake stiler knappens posisjon etter vis tid (setIn
     knapp.style.display = "block";
 }
 // Hva som kjer når man klikker knappen /\
+
+// Get's Position Data From Elements \/
+// get's position data from element: plank \/
+let plankPosition = plank.getBoundingClientRect();
+
+let plankX = plankPosition.left + window.scrollX;
+let plankY = plankPosition.top + window.scrollY;
+
+console.log(plank.getBoundingClientRect())
+console.log(document.getElementById("plank"));
+console.log(plankX, " ", plankY);
+// get's position data from element: plank /\
+
+// get's position data from element: stripOfWood \/
+let stripOfWoodPosition = stripOfWood.getBoundingClientRect();
+
+let stripOfWoodX = stripOfWoodPosition.left + window.scrollX;
+let stripOfWoodY = stripOfWoodPosition.top + window.scrollY;
+
+console.log(stripOfWood.getBoundingClientRect())
+console.log(document.getElementById("stripOfWood"));
+console.log(stripOfWoodX, " ", stripOfWoodY);
+// get's position data from element: stripOfWood /\
+
+// get's position data from element: board \/
+let boardPosition = board.getBoundingClientRect();
+
+let boardX = boardPosition.left + window.scrollX;
+let boardY = boardPosition.top + window.scrollY;
+
+console.log(board.getBoundingClientRect())
+console.log(document.getElementById("board"));
+console.log(boardX, " ", boardY);
+// get's position data from element: board /\
+
+// get's position data from element: divCrowbar \/
+let divCrowbarPosition = divCrowbar.getBoundingClientRect();
+
+let divCrowbarX = divCrowbarPosition.left + window.scrollX;
+let divCrowbarY = divCrowbarPosition.top + window.scrollY;
+
+console.log(divCrowbar.getBoundingClientRect())
+console.log(document.getElementById("divCrowbar"));
+console.log(divCrowbarX, " ", divCrowbarY);
+// get's position data from element: divCrowbar /\
+
+// get's position data from element: mainCrowbar \/
+let mainCrowbarPosition = mainCrowbar.getBoundingClientRect();
+
+let mainCrowbarX = mainCrowbarPosition.left + window.scrollX;
+let mainCrowbarY = mainCrowbarPosition.top + window.scrollY;
+
+console.log(mainCrowbar.getBoundingClientRect())
+console.log(document.getElementById("mainCrowbar"));
+console.log(mainCrowbarX, " ", mainCrowbarY);
+// get's position data from element: mainCrowbar /\
+// Get's Position Data From Elements /\
 
 // gjøre kubeinet bevegelig med å dra den med musen \/
 document.addEventListener("DOMContentLoaded", () => {
