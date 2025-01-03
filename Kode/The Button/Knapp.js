@@ -141,6 +141,16 @@ knappTrykk.style.display = "none";
 let clickCount = 0;
 // setter mengde klikk /\
 
+// gets sound from html \/
+var doorSlam = document.getElementById("doorSlam");
+// gets sound from html /\
+
+// prepares sound for use \/
+function playDoorSlam() {
+    doorSlam.play();
+}
+// prepares sound for use /\
+
 // Hva som kjer når man klikker knappen \/
 knapp.addEventListener("click", knappKlikket);
 function knappKlikket() {
@@ -233,7 +243,7 @@ function knappKlikket() {
 
                     T13.style.display = "none";
                     SE1.style.display = "block";
-                    
+                    playDoorSlam()
                     
                     setTimeout(soundEffect1, 450);
                     function soundEffect1() {
