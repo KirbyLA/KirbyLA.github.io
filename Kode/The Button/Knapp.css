@@ -55,3 +55,7 @@ Img {
     cursor: move;
     z-index: 3;
 }
+
+#metalPlate {
+    z-index: 1;
+}
