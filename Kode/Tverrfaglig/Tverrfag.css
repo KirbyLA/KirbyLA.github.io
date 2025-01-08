@@ -60,10 +60,6 @@ img {
     margin-bottom: 5px;
 }
 
-.ménu4 > img {
-    border-radius: 25px;
-}
-
 .ménu2 {
     background-color: lightgray;
     padding: 10px;
@@ -88,6 +84,10 @@ img {
     margin-left: -50px;
     border-radius: 25px;
     text-align: center;
+}
+
+.ménu4 > img {
+    border-radius: 25px;
 }
 
 .main {
