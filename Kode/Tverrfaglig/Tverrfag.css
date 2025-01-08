@@ -60,6 +60,10 @@ img {
     margin-bottom: 5px;
 }
 
+.ménu4 > img {
+    border-radius: 25px;
+}
+
 .ménu2 {
     background-color: lightgray;
     padding: 10px;
