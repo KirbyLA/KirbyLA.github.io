@@ -36,37 +36,47 @@ html, body {
 .mainMénu {
     background-color:darkgray;
     width: 93.99rem;
-    border-radius: 60px;
+    border-radius: 70px;
     display: flex;
     justify-content: space-around;
 }
 
 .ménu1 {
     background-color: lightgray;
-    padding: 100px;
+    padding: 10px;
+    margin-right: -50px;
     border-radius: 25px;
+    text-align: center;
 }
 
 img {
-    width: 10px;
+    width: 150px;
 }
 
 .ménu2 {
     background-color: lightgray;
-    padding: 100px;
+    padding: 10px;
+    margin-left: -50px;
+    margin-right: -50px;
     border-radius: 25px;
+    text-align: center;
 }
 
 .ménu3 {
     background-color: lightgray;
-    padding: 100px;
+    padding: 10px;
+    margin-left: -50px;
+    margin-right: -50px;
     border-radius: 25px;
+    text-align: center;
 }
 
 .ménu4 {
     background-color: lightgray;
-    padding: 100px;
+    padding: 10px;
+    margin-left: -50px;
     border-radius: 25px;
+    text-align: center;
 }
 
 .main {
@@ -75,4 +85,5 @@ img {
 
 .footer {
     background-color:palevioletred;
+    text-align: center;
 }
