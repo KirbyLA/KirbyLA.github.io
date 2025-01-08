@@ -2,25 +2,77 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: lightgray;
 }
 
 .header { grid-area: header; }
-.ménu { grid-area: ménu; }
+.ménu1 { grid-area: ménu1; }
+.ménu2 { grid-area: ménu2;}
+.ménu3 { grid-area: ménu3;}
+.ménu4 { grid-area: ménu4;}
 .main { grid-area: main; }
 .footer { grid-area: footer; }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto  auto 1fr auto;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-        'header header  header  header  header'
-        'ménu   ménu    ménu    ménu    ménu'
-        'main   main    main    main    main'
-        'footer footer  footer  footer  footer';
+        'header header header header'
+        'ménu1  ménu2  ménu3  ménu4'
+        'main   main   main   main'
+        'footer footer footer footer';
 }
 
 .grid-container > div { /* Alle barna til div-containeren av typen div */
     font-size: 1.5rem;
-    padding: 1rem 1rem 1rem 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.header {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.mainMénu {
+    background-color:darkgray;
+    width: 93.99rem;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ménu1 {
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+img {
+    width: 10px;
+}
+
+.ménu2 {
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.ménu3 {
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.ménu4 {
+    background-color: lightgray;
+    padding: 100px;
+    border-radius: 25px;
+}
+
+.main {
+    background-color: cornflowerblue;
+}
+
+.footer {
+    background-color:palevioletred;
 }
