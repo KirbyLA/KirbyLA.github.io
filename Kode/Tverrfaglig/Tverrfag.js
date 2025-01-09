@@ -1,0 +1,1 @@
+document.querySelector(".ménu>img").style.backgroundColor = "red"
