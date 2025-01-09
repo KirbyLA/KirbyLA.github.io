@@ -114,19 +114,23 @@ img {
     border-radius: 25px;
 }
 
-.main {
-    /* background-color: lightgray; */
+/* .main {
+
+} */
+
+.mainText {
     margin-right: 150px;
     margin-left: 150px;
 }
 
 .gameContainer {
-    background-color: blue;
+    background-color: darkgray;
     border-radius: 70px;
+    padding: 200px;
 }
 
 .game {
-    background-color: crimson;
+    background-color: lightgray;
 }
 
 .footer {
