@@ -132,7 +132,10 @@ img {
 }
 
 .game {
-    background-color: lightgray;
+    background-image: url(Bilder/avocado-2351191_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 70px;
     margin-left: 50px;
     margin-right: 50px;
