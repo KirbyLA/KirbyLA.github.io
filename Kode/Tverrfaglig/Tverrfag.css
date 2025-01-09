@@ -2,10 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: lightgray;
 }
 
 .header { grid-area: header; }
+.ménu { grid-area: ménu;}
 .infoBox1 { grid-area: infoBox1; }
 .infoBox2 { grid-area: infoBox2;}
 .infoBox3 { grid-area: infoBox3;}
@@ -18,6 +18,7 @@ html, body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
         'header   header   header   header'
+        'ménu     ménu     ménu     ménu'
         'infoBox1 infoBox2 infoBox3 infoBox4'
         'main     main     main     main'
         'footer   footer   footer   footer';
@@ -29,9 +30,23 @@ html, body {
 }
 
 .header {
-    /* background-color: lightgray; */
+    background-color: lightgray;
     display: flex;
     justify-content: center;
+}
+
+.ménu {
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: aqua;
+}
+
+.ménu > img {
+    float: right;
+    width: 43px;
+    margin-top: 17px;
 }
 
 .infoBoxHolder {
@@ -40,6 +55,8 @@ html, body {
     border-radius: 70px;
     display: flex;
     justify-content: space-around;
+    z-index: 1;
+    /* margin-top: 10px; */
 }
 
 .infoBox1 {
