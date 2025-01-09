@@ -5,12 +5,13 @@ html, body {
 }
 
 .header { grid-area: header; }
-.ménu { grid-area: ménu;}
+.ménu { grid-area: ménu; }
 .infoBox1 { grid-area: infoBox1; }
-.infoBox2 { grid-area: infoBox2;}
-.infoBox3 { grid-area: infoBox3;}
-.infoBox4 { grid-area: infoBox4;}
+.infoBox2 { grid-area: infoBox2; }
+.infoBox3 { grid-area: infoBox3; }
+.infoBox4 { grid-area: infoBox4; }
 .main { grid-area: main; }
+.game { grid-area: game; }
 .footer { grid-area: footer; }
 
 .grid-container {
@@ -21,6 +22,7 @@ html, body {
         'ménu     ménu     ménu     ménu'
         'infoBox1 infoBox2 infoBox3 infoBox4'
         'main     main     main     main'
+        'game     game     game     game'
         'footer   footer   footer   footer';
 }
 
@@ -116,6 +118,15 @@ img {
     /* background-color: lightgray; */
     margin-right: 150px;
     margin-left: 150px;
+}
+
+.gameContainer {
+    background-color: blue;
+    border-radius: 70px;
+}
+
+.game {
+    background-color: crimson;
 }
 
 .footer {
