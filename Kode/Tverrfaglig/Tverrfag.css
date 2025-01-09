@@ -58,12 +58,11 @@ html, body {
 
 .infoBoxHolder {
     background-color:darkgray;
-    width: 93.99rem;
+    padding-top: 35px;
+    padding-bottom: 35px;
     border-radius: 70px;
     display: flex;
     justify-content: space-around;
-    z-index: 1;
-    /* margin-top: 10px; */
 }
 
 .infoBox1 {
@@ -126,11 +125,19 @@ img {
 .gameContainer {
     background-color: darkgray;
     border-radius: 70px;
-    padding: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 .game {
     background-color: lightgray;
+    border-radius: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 225px;
+    text-align: center;
 }
 
 .footer {
