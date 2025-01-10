@@ -135,9 +135,6 @@ canvas {
     margin-left: 75px;
     margin-right: 75px;
     position: relative;
-    z-index: 0;
-    max-width: 1354;
-    max-height: 610.6;
 }
 
 .game {
@@ -150,8 +147,6 @@ canvas {
     margin-right: 50px;
     padding: 225px;
     text-align: center;
-    max-width: 804;
-    max-height: 160.6;
 }
 
 #pauseButton {
