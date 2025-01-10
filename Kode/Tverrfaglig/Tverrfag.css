@@ -122,17 +122,17 @@ img {
     margin-left: 150px;
 }
 
+canvas {
+    margin: 100px;
+}
+
 .gameContainer {
     background-color: darkgray;
     border-radius: 70px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-left: 75px;
     margin-right: 75px;
-}
-
-canvas {
-    margin: 100px;
 }
 
 .game {
