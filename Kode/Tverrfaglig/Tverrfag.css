@@ -42,7 +42,7 @@ html, body {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background-color: aqua;
+    background-color: lightgray;
     z-index: 3;
 }
 
