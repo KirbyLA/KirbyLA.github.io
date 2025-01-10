@@ -43,6 +43,7 @@ html, body {
     position: -webkit-sticky;
     top: 0;
     background-color: aqua;
+    z-index: 3;
 }
 
 .ménu > p {
@@ -133,6 +134,10 @@ canvas {
     padding-bottom: 60px;
     margin-left: 75px;
     margin-right: 75px;
+    position: relative;
+    z-index: 0;
+    max-width: 1354;
+    max-height: 610.6;
 }
 
 .game {
@@ -145,6 +150,20 @@ canvas {
     margin-right: 50px;
     padding: 225px;
     text-align: center;
+    max-width: 804;
+    max-height: 160.6;
+}
+
+#pauseButton {
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 70px;
+}
+
+#player {
+    width: 200px;
+    z-index: 1;
 }
 
 .footer {
