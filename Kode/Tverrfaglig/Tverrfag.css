@@ -163,7 +163,8 @@ canvas {
 
 #player {
     width: 200px;
-    z-index: 1;
+    position: absolute;
+    z-index: 9;
 }
 
 .footer {
