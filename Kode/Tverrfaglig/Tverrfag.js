@@ -38,3 +38,30 @@ new Chart(testChart,{
     }
 });
 // chart /\
+
+// prepares necesary elements for the game \/
+let playButton = document.getElementById("playButton");
+let pauseButton = document.getElementById("pauseButton");
+let player = document.getElementById("player");
+
+pauseButton.style.display = "none";
+player.style.display = "none";
+// preparess necesary elements for the game /\
+
+// when start button clicked, you can play the game \/
+playButton.addEventListener("click", startGame);
+function startGame() {
+    playButton.style.visibility = "hidden";
+    pauseButton.style.display = "block";
+    player.style.display = "block";
+}
+// when start button clicked, you can play the game /\
+
+// when pause button clicked, the game stops \/
+pauseButton.addEventListener("click", pauseGame);
+function pauseGame() {
+    pauseButton.style.display = "none";
+    playButton.style.visibility = "visible";
+    player.style.display = "none";
+}
+// when pause button clicked, the game stops /\
