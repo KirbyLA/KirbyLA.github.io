@@ -131,6 +131,10 @@ img {
     margin-right: 75px;
 }
 
+canvas {
+    margin: 100px;
+}
+
 .game {
     background-image: url(Bilder/avocado-2351191_1280.jpg);
     background-position: center;
