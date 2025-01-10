@@ -65,3 +65,8 @@ function pauseGame() {
     player.style.display = "none";
 }
 // when pause button clicked, the game stops /\
+
+function whichKey(event) {
+    let key = event.key;
+    console.log(key)
+}
