@@ -123,6 +123,16 @@ img {
     margin-left: 150px;
 }
 
+.mainListLeft {
+    float: left;
+    margin-left: 100px;
+}
+
+.mainListRight {
+    float: right;
+    margin-right: 200px;
+}
+
 canvas {
     margin: 100px;
 }
