@@ -123,6 +123,12 @@ img {
     margin-left: 150px;
 }
 
+.mainTextCentering {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
 .mainListLeft {
     float: left;
     margin-left: 100px;
