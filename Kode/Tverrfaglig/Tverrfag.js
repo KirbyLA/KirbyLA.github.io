@@ -28,15 +28,15 @@ new Chart(FoodChart,{
             data: [21, 20, 19, 11, 29], // y values
             borderWidth: 1
         }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+    },// skaper grafen \/
+    // options: {
+    //     scales: {
+    //         y: {
+    //             beginAtZero: true
+    //         }
+    //     }
+    // }
+}); // skaper grafen /\
 // Matsvinn mat chart /\
 
 // Matsvinn hvem chart \/
@@ -52,13 +52,13 @@ new Chart(CulpritChart,{
             borderWidth: 1
         }]
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
+    // options: {
+        // scales: {
+            // y: {
+                // beginAtZero: true
+            // }
+        // }
+    // }
 });
 // Matsvinn hvem chart /\
 
