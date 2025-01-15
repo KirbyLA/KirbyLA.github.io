@@ -76,6 +76,13 @@ function playDoorSlam() {
 }
 // prepares sound for use /\
 
+//
+setTimeout(startTalking, 1500)
+function startTalking() {
+    talk.innerText = dialogue[0];
+}
+//
+
 // Hva som kjer når man klikker knappen \/
 knapp.addEventListener("click", knappKlikket);
 function knappKlikket() {
