@@ -16,16 +16,16 @@ function closeMenu() {
 }
 // lets you stop the sticky ménu /\
 
-// chart \/
-const testChart = document.getElementById("chart");
+// Matsvinn mat chart \/
+const FoodChart = document.getElementById("FoodChart");
 
-new Chart(testChart,{
-    type: 'bar', // type of chart
+new Chart(FoodChart,{
+    type: 'pie', // type of chart
     data: {
-        labels: ['Papa', 'lebbie', 'trash', 'meep', 'glurb', 'ggoboo', 'Abbseluggelugle'], // x values
+        labels: ['Bakevarer', 'Midagsrester', 'Frukt&Grønt', 'Meieriprodukter', 'Annet'], // x values
         datasets: [{
-            label: 'thing',
-            data: [20, 6, 8, 10, 2, 13, 25], // y values
+            label: 'Prosent mat',
+            data: [21, 20, 19, 11, 29], // y values
             borderWidth: 1
         }]
     },
@@ -37,7 +37,30 @@ new Chart(testChart,{
         }
     }
 });
-// chart /\
+// Matsvinn mat chart /\
+
+// Matsvinn hvem chart \/
+const CulpritChart = document.getElementById("CulpritChart");
+
+new Chart(CulpritChart,{
+    type: 'pie', // type of chart
+    data: {
+        labels: ['Husholdninger', 'Matindustri', 'Dagligvare', 'Jordbruk', 'Servering', 'Sjømat industri', 'Grossist', 'Kiosk, bensin- og servicehandel', 'Offentlig sektor'], // x values
+        datasets: [{
+            label: 'Prosent av hvem',
+            data: [48, 19, 15, 9, 3, 3, 1, 1, 1], // y values
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+// Matsvinn hvem chart /\
 
 // prepares necesary elements for the game \/
 let playButton = document.getElementById("playButton");
