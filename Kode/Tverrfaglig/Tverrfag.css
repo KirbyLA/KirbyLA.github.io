@@ -102,6 +102,10 @@ img {
     text-align: center;
 }
 
+.infoBox3 > img {
+    width: 100px;
+}
+
 .infoBox4 {
     background-color: lightgray;
     padding: 10px;
