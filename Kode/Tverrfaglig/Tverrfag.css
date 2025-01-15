@@ -123,6 +123,16 @@ img {
     margin-left: 150px;
 }
 
+.mainListLeftHeader {
+    margin-left: 300px;
+    float: left;
+}
+
+.mainListRightHeader {
+    float: right;
+    margin-right: 300px;
+}
+
 .mainTextCentering {
     text-align: center;
     margin-left: 100px;
@@ -140,7 +150,9 @@ img {
 }
 
 canvas {
-    margin: 100px;
+    margin: 450px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .gameContainer {
