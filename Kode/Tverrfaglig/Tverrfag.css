@@ -51,10 +51,30 @@ html, body {
 }
 
 .ménu > img {
-    float: right;
     width: 43px;
     margin: 0;
     margin-top: -30px;
+}
+
+#settings {
+    float: right;
+}
+
+#settings:hover {
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+#backspace {
+    float: left;
+    rotate: 180deg;
+    margin-top: -20px;
+    width: 55px;
+}
+
+#backspace:hover {
+    background-color: darkgray;
+    border-radius: 10px;
 }
 
 .infoBoxHolder {
