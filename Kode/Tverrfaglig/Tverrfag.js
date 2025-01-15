@@ -3,18 +3,9 @@ let settings = document.getElementById("settings");
 
 settings.addEventListener("click", openSettings);
 function openSettings() {
-
+    
 }
 // settings /\
-
-// lets you stop the sticky ménu \/
-let X = document.getElementById("X");
-
-X.addEventListener("click", closeMenu);
-function closeMenu() {
-    X.style.backgroundColor = "red"
-}
-// lets you stop the sticky ménu /\
 
 // Matsvinn mat chart \/
 const FoodChart = document.getElementById("FoodChart");
