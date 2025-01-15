@@ -119,18 +119,18 @@ img {
 } */
 
 .mainText {
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-right: 200px;
+    margin-left: 200px;
 }
 
 .mainListLeftHeader {
-    margin-left: 300px;
+    margin-left: 250px;
     float: left;
 }
 
 .mainListRightHeader {
     float: right;
-    margin-right: 300px;
+    margin-right: 250px;
 }
 
 .mainTextCentering {
@@ -146,13 +146,19 @@ img {
 
 .mainListRight {
     float: right;
-    margin-right: 200px;
+    margin-right: 150px;
 }
 
-canvas {
-    margin: 450px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+.fridge {
+    width: 500px;
+    float: left;
+    margin-left: 200px;
+}
+
+.prison {
+    width: 500px;
+    float: right;
+    margin-right: 200px;
 }
 
 .gameContainer {
