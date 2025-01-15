@@ -1,51 +1,33 @@
-// henter dialog elementene fra html \/
-let T1 = document.getElementById("talk1");
-let T2 = document.getElementById("talk2");
-let T3 = document.getElementById("talk3");
-let T4 = document.getElementById("talk4");
-let T5 = document.getElementById("talk5");
-let T6 = document.getElementById("talk6");
-let T7 = document.getElementById("talk7");
-let T8 = document.getElementById("talk8");
-let T9 = document.getElementById("talk9");
-let T10 = document.getElementById("talk10");
-let T11 = document.getElementById("talk11");
-let T12 = document.getElementById("talk12");
-let T13 = document.getElementById("talk13");
-let SE1 = document.getElementById("soundEffect1");
-let T14 = document.getElementById("talk14");
-let T15 = document.getElementById("talk15");
-let T16 = document.getElementById("talk16");
-let T17 = document.getElementById("talk17");
-let T18 = document.getElementById("talk18");
-let T19 = document.getElementById("talk19");
-let T20 = document.getElementById("talk20");
-let T21 = document.getElementById("talk21");
-// henter dialog elementene fra html /\
+// dialogue options now in an array \/
+const dialogue = [
+    "Oh, hi. Whatever you do, do NOT, click that button!",
+    "What did you not understand about NOT, clicking it?",
+    "I said don't click it!",
+    "Don't, click it.",
+    "Stop it!!!",
+    "Please?",
+    "*large sigh*",
+    "I see, you're a difficult one aren't you?",
+    "You're sOoOOOoOooO funny, huh?",
+    "Well, two can play that game!",
+    "HA! Can't press the button NOW.",
+    "Now if you'll excuuuUUUUUse me, princess. I'll quickly go and do something. Don't do anything dumb while I'm gone.",
+    "Hmm? What am I going to do you ask? Well, none of your bUsinEss.",
+    "*SLAM*",
+    "I'm ba...",
+    "What did you?...",
+    "How did you?!...",
+    "Uuuurgh",
+    "Why are you so determined to press it?!",
+    "Fine!",
+    "Try this!",
+    "Better not try this time..."
+];
+// dialogue options now in an array /\
 
-// skuler dialog som ikke er i bruk \/
-T2.style.display = "none";
-T3.style.display = "none";
-T4.style.display = "none";
-T5.style.display = "none";
-T6.style.display = "none";
-T7.style.display = "none";
-T8.style.display = "none";
-T9.style.display = "none";
-T10.style.display = "none";
-T11.style.display = "none";
-T12.style.display = "none";
-T13.style.display = "none";
-SE1.style.display = "none";
-T14.style.display = "none";
-T15.style.display = "none";
-T16.style.display = "none";
-T17.style.display = "none";
-T18.style.display = "none";
-T19.style.display = "none";
-T20.style.display = "none";
-T21.style.display = "none";
-// skuler dialog som ikke er i bruk /\
+// makes html element available for array \/
+let talk = document.getElementById("talk");
+// makes html element available for array /\
 
 // får tilgang til fremtidige props fra html \/
 let plank = document.getElementById("plank");
@@ -108,13 +90,12 @@ function knappKlikket() {
     // changes events that happen after clicking the button \/
     if (clickCount == 1) {
 
-        T1.style.display = "none";
-        T2.style.display = "block";
+        // talk.innerText = dialogue[0]
+        talk.innerText = dialogue[1];
 
     } else if (clickCount == 2) {
 
-        T2.style.display = "none";
-        T3.style.display = "block";
+        talk.innerText = dialogue[2];
 
     } else if (clickCount == 3) {
 
