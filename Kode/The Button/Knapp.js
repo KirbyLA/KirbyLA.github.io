@@ -1,29 +1,33 @@
 // dialogue options now in an array \/
 const dialogue = [
-    "Oh, hi. Whatever you do, do NOT, click that button!",
-    "What did you not understand about NOT, clicking it?",
-    "I said don't click it!",
-    "Don't, click it.",
-    "Stop it!!!",
-    "Please?",
-    "*large sigh*",
-    "I see, you're a difficult one aren't you?",
-    "You're sOoOOOoOooO funny, huh?",
-    "Well, two can play that game!",
-    "HA! Can't press the button NOW.",
-    "Now if you'll excuuuUUUUUse me, princess. I'll quickly go and do something. Don't do anything dumb while I'm gone.",
-    "Hmm? What am I going to do you ask? Well, none of your bUsinEss.",
-    "*SLAM*",
-    "I'm ba...",
-    "What did you?...",
-    "How did you?!...",
-    "Uuuurgh",
-    "Why are you so determined to press it?!",
-    "Fine!",
-    "Try this!",
-    "Better not try this time..."
+    "Oh, hi. Whatever you do, do NOT, click that button!", //1
+    "What did you not understand about NOT, clicking it?",//2
+    "I said don't click it!",//3
+    "Don't, click it.",//4
+    "Stop it!!!",//5
+    "Please?",//6
+    "*large sigh*",//7
+    "I see, you're a difficult one aren't you?",//8
+    "You're sOoOOOoOooO funny, huh?",//9
+    "Well, two can play that game!",//10
+    "HA! Can't press the button NOW.",//11
+    "Now if you'll excuuuUUUUUse me, princess. I'll quickly go and do something. Don't do anything dumb while I'm gone.",//
+    "Hmm? What am I going to do you ask? Well, none of your bUsinEss.",//12
+    "*SLAM*",//13
+    "I'm ba...",//14
+    "What did you?...",//15
+    "How did you?!...",//16
+    "Uuuurgh",//17
+    "Why are you so determined to press it?!",//18
+    "Fine!",//19
+    "Try this!",//20
+    "Better not try something this time..."//21
 ];
 // dialogue options now in an array /\
+
+// empty dialogue option \/
+let dialoguePause = "";
+// empty dialogue option /\
 
 // makes html element available for array \/
 let talk = document.getElementById("talk");
@@ -106,42 +110,35 @@ function knappKlikket() {
 
     } else if (clickCount == 3) {
 
-        T3.style.display = "none";
-        T4.style.display = "block";
+        talk.innerText = dialogue[3];
 
     } else if (clickCount == 4) {
 
-        T4.style.display = "none";
-        T5.style.display = "block";
+        talk.innerText = dialogue[4];
 
     } else if (clickCount == 5) {
 
-        T5.style.display = "none";
-        T6.style.display = "block";
+        talk.innerText = dialogue[5];
 
     } else if (clickCount == 6) {
 
-        T6.style.display = "none";
-        T7.style.display = "block";
+        talk.innerText = dialogue[6];
 
     } else if (clickCount == 7) {
 
-        T7.style.display = "none";
-        T8.style.display = "block";
+        talk.innerText = dialogue[7];
 
     } else if (clickCount == 8) {
 
-        T8.style.display = "none";
-        T9.style.display = "block";
+        talk.innerText = dialogue[8];
 
     } else if (clickCount == 9) {
 
-        T9.style.display = "none";
-        T10.style.display = "block";
+        talk.innerText = dialogue[9];
 
     } else if (clickCount == 10) {
 
-        T10.style.display = "none";
+        talk.innerText = dialoguePause;
 
     } else if (clickCount == 11) {
 
@@ -154,32 +151,29 @@ function knappKlikket() {
 
     } else if (clickCount == 15) {
 
-        T11.style.display = "block";
+        talk.innerText = dialogue[10];
         plank.style.display = "block";
 
         setTimeout(waitToTalk1, 3500)
         function waitToTalk1() {
 
-            T11.style.display = "none";
-            T12.style.display = "block";
+            talk.innerText = dialogue[11];
 
             setTimeout(waitToTalk2, 6250);
             function waitToTalk2() {
 
-                T12.style.display = "none";
-                T13.style.display = "block";
+                talk.innerText = dialogue[12];
 
                 setTimeout(waitToTalk3, 5250);
                 function waitToTalk3() {
 
-                    T13.style.display = "none";
-                    SE1.style.display = "block";
+                    talk.innerText = dialogue[13];
                     playDoorSlam()
                     
                     setTimeout(soundEffect1, 450);
                     function soundEffect1() {
 
-                        SE1.style.display = "none";
+                        talk.innerText = dialoguePause;
                         divCrowbar.style.display = "block";
                         mainCrowbar.style.display = "block";
 
@@ -189,49 +183,42 @@ function knappKlikket() {
         }
     } else if (clickCount == 20) {
 
-        T14.style.display = "block";
+        talk.innerText = dialogue[14];
 
     } else if (clickCount == 21) {
 
-        T14.style.display = "none";
-        T15.style.display = "block";
+        talk.innerText = dialogue[15];
 
     } else if (clickCount == 22) {
 
-        T15.style.display = "none";
-        T16.style.display = "block";
+        talk.innerText = dialogue[16];
 
     } else if (clickCount == 23) {
 
-        T16.style.display = "none";
-        T17.style.display = "block";
+        talk.innerText = dialogue[17];
 
     } else if (clickCount == 24) {
 
-        T17.style.display = "none";
-        T18.style.display = "block";
+        talk.innerText = dialogue[18];
 
     } else if (clickCount == 25) {
 
-        T18.style.display = "none";
-        T19.style.display = "block";
+        talk.innerText = dialogue[19];
 
     } else if (clickCount == 26) {
 
-        T19.style.display = "none";
-        T20.style.display = "block";
+        talk.innerText = dialogue[20];
         metalPlate.style.display = "block";
 
         setTimeout(waitToTalk4, 900)
         function waitToTalk4() {
 
-            T20.style.display = "none";
-            T21.style.display = "block";
+            talk.innerText = dialogue[21];
 
-            setTimeout(waitToTalk5, 1500)
+            setTimeout(waitToTalk5, 1750)
             function waitToTalk5() {
 
-                T21.style.display = "none";
+                talk.innerText = dialoguePause;
 
             }
         }
