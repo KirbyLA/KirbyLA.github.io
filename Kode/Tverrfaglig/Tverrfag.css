@@ -189,7 +189,16 @@ img {
     padding-bottom: 50px;
 }
 
+#HVKGMD_Question1 { grid-area: HVKMGD_Question1; }
+#HVKGMD_Question2 { grid-area: HVKMGD_Question2; }
+#HVKGMD_Question3 { grid-area: HVKMGD_Question3; }
+
 #HVKGMD_Interactive {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        '#HVKGMD_Question1 #HVKGMD_Question2 #HVKGMD_Question3';
+
     background-color: darkgray;
     border-radius: 70px;
     margin-left: 200px;
