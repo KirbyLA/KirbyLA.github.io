@@ -198,6 +198,10 @@ img {
 }
 
 #HVKGMD_Question1 {
+
+}
+
+#HVKGMD_Options1 {
     background-color: lightgray;
     border-radius: 60px;
     padding: 10px;
@@ -207,8 +211,29 @@ img {
 }
 
 #HVKGMD_Question2 {
+
+}
+
+#HVKGMD_Options2 {
     background-color: lightgray;
     border-radius: 60px;
+    padding: 10px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    margin-right: 800px;
+}
+
+#HVKGMD_Question3 {
+
+}
+
+#HVKGMD_Options3 {
+    background-color: lightgray;
+    border-radius: 60px;
+    padding: 10px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    margin-right: 800px;
 }
 
 .gameContainer {
