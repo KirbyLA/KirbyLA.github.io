@@ -1,11 +1,26 @@
-// settings \/
+// settings turned on \/
 let settings = document.getElementById("settings");
+let background = document.getElementById("background");
 
 settings.addEventListener("click", openSettings);
 function openSettings() {
+
+    if (background = "white") {
+
+        document.getElementById("background").style.color = "white";
+        document.getElementById("background").style.backgroundColor = "#2B202A";
+
+    } 
     
+    if (background != "white") {
+    
+        document.getElementById("background").style.color = "black";
+        document.getElementById("background").style.backgroundColor = "white"
+    
+    }
+        
 }
-// settings /\
+// settings turn on /\
 
 // Matsvinn mat chart \/
 const FoodChart = document.getElementById("FoodChart");
