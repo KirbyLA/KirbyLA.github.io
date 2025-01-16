@@ -189,6 +189,28 @@ img {
     padding-bottom: 50px;
 }
 
+#HVKGMD_Interactive {
+    background-color: darkgray;
+    border-radius: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 25px;
+}
+
+#HVKGMD_Question1 {
+    background-color: lightgray;
+    border-radius: 60px;
+    padding: 10px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    margin-right: 800px;
+}
+
+#HVKGMD_Question2 {
+    background-color: lightgray;
+    border-radius: 60px;
+}
+
 .gameContainer {
     background-color: darkgray;
     border-radius: 70px;
