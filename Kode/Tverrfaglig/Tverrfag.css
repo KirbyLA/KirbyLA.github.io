@@ -215,8 +215,9 @@ img {
     border-radius: 60px;
     padding: 10px;
     padding-bottom: 45px;
-    padding-left: 45px;
-    margin-right: 800px;
+    padding-left: 53px;
+    margin-right: 810px;
+    padding-right: 50px;
 }
 
 #HVKGMD_Question2 {
@@ -229,7 +230,8 @@ img {
     padding: 10px;
     padding-bottom: 45px;
     padding-left: 45px;
-    margin-right: 800px;
+    margin-right: 400px;
+    margin-left: 400px;
 }
 
 #HVKGMD_Question3 {
@@ -242,7 +244,7 @@ img {
     padding: 10px;
     padding-bottom: 45px;
     padding-left: 45px;
-    margin-right: 800px;
+    margin-left: 750px;
 }
 
 .gameContainer {
