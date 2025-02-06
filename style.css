@@ -88,6 +88,11 @@ nav ul li a:hover:not(.active){
     margin-right: 1.7%;
 }
 
+.presentasjon {
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
 .footer {
     background: linear-gradient(red, black);
     color: white;
