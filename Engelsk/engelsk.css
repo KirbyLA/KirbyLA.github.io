@@ -1,6 +1,8 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+    color: rgb(240, 240, 240);
 }
 
 .header { grid-area: header; }
@@ -29,8 +31,12 @@ html, body {
 }
 
 .header {
-    background: linear-gradient(270deg, yellow, wheat);
-    color: white;
+    background-image: url(united-kingdom-2702679_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: black;
     text-align: center;
 
     /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
@@ -40,7 +46,7 @@ html, body {
 }
 
 .ménu {
-    background-color: rgb(28, 225, 22);
+    background-color: rgba(0, 0, 0, 0.83);
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -56,25 +62,24 @@ nav ul{
 
 nav ul li a{
     text-decoration: none;
-    color:white;
+    color:rgb(240, 240, 240);
     padding:1.05rem;
     display: block;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     display: inline;
 }
 /* extended box when hover problem */
 nav ul li a:hover{
-    background-color:rgb(21, 201, 21);
     padding: 1.3rem;
 }
 
 nav ul li a:hover:not(.active){
-    background-color: #24D3CB;
+    background-color: rgb(47, 47, 47);
 }
 
 .active {
-    background-color: #006666;
-    color: white;
+    background-color: rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
 }
 
 .main {
@@ -83,7 +88,7 @@ nav ul li a:hover:not(.active){
 }
 
 .footer {
-    background: linear-gradient(red, black);
-    color: white;
+    background: black;
+    color: rgb(240, 240, 240);
     text-align: center;
 }
