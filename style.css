@@ -82,12 +82,6 @@ nav ul li a:hover:not(.active){
     color: rgb(240, 240, 240);
 }
 
-#settings {
-    width: 40px;
-    float: right;
-    margin-top: -39px;
-}
-
 .main {
     margin-left: 5%;
     margin-right: 5%;
