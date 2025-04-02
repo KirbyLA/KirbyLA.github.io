@@ -87,6 +87,10 @@ nav ul li a:hover:not(.active){
     margin-right: 5%;
 }
 
+.main > p > a {
+    color: chartreuse;
+}
+
 .footer {
     background: black;
     color: rgb(240, 240, 240);
