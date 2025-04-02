@@ -31,12 +31,12 @@ html, body {
 }
 
 .header {
-    background-image: url(technology-1283624_1280.jpg);
+    background-image: url(Screenshot_av_Kode.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    color: black;
+    color: rgb(240, 240, 240);
     text-align: center;
 
     /* Bruker flexbox for å plassere bildet/logoen og teksten i midten av headeren */
@@ -85,6 +85,10 @@ nav ul li a:hover:not(.active){
 .main {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.main > p > a {
+    color: chartreuse;
 }
 
 .footer {
