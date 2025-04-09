@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test: Legg til person</title>
     <script>
-        // Hent postnummer frå serveren og fyll ut <select>-lista
-        async function hentPostnummer() {
-            const response = await fetch("/postnummer");
-            const postnummer = await response.json();
+        // // Hent postnummer frå serveren og fyll ut <select>-lista
+        // async function hentPostnummer() {
+        //     const response = await fetch("/postnummer");
+        //     const postnummer = await response.json();
 
-            const select = document.getElementById("postnummer");
-            postnummer.forEach(post => {
-                const option = document.createElement("option");
-                option.value = post.postnummer;
-                option.textContent = `${post.postnummer} - ${post.poststed}`;
-                select.appendChild(option);
-            });
-        }
+        //     const select = document.getElementById("postnummer");
+        //     postnummer.forEach(post => {
+        //         const option = document.createElement("option");
+        //         option.value = post.postnummer;
+        //         option.textContent = `${post.postnummer} - ${post.poststed}`;
+        //         select.appendChild(option);
+        //     });
+        // }
 
-        // Kall funksjonen når sida blir lasta inn
-        window.onload = hentPostnummer;
+        // // Kall funksjonen når sida blir lasta inn
+        // window.onload = hentPostnummer;  
 
         async function leggTilPerson(event) {
             event.preventDefault(); // Forhindre standard form-innsending
@@ -61,9 +61,7 @@
         <input type="Epost" id="Epost" name="Epost" required><br>
 
         <label for="Telefonnummer">Telefonnummer:</label>
-        <select id="Telefonnummer" name="Telefonnummer" required>
-            <option value="" disabled selected>Velg postnummer</option>
-        </select><br>
+        <input type="Telefonnummer" id="Telefonnummer" name="Telefonnummer" required><br>
 
         <button type="submit">Legg til bruker</button>
     </form>
