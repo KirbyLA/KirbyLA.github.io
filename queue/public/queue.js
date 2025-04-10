@@ -22,4 +22,23 @@ async function hentPerson() {
     // }
 }
 
-hentPerson(); 
+hentPerson();
+
+async function leggTilPerson(event) {
+    event.preventDefault(); // Forhindre standard form-innsending
+
+    const navn = document.getElementById("navn").value;
+    console.log(navn)
+    const response = await fetch("/nyperson", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            navn
+        })
+    });
+    console.log(response.body)
+    const result = await response.json();
+    alert(result.message);
+}

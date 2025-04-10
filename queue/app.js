@@ -16,6 +16,16 @@ app.get("/personer", (req, res) => {
     res.json(users);
 });
 
+app.post("/nyperson", async (req, res) => {
+    const navn = req.body;
+    console.log(navn)
+    const stmt = db.prepare("INSERT INTO person (navn) VALUES (?)");
+    const info = stmt.run(navn);
+
+    res.json({ message: "Ny person lagt til", info });
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server køyrer: http://localhost:${PORT}`);
 });
