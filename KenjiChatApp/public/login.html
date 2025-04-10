@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logg inn</title>
+    <link rel="stylesheet" href="Lx2.css">
     <script>
         async function loggInn(event) {
             event.preventDefault();
 
-            const fornavn = document.getElementById("Brukernavn").value;
-            const passord = document.getElementById("Passord").value;
+            const Brukernavn = document.getElementById("Brukernavn").value;
+            const Passord = document.getElementById("Passord").value;
 
             const response = await fetch("/login", {
                 method: "POST",
@@ -29,32 +30,21 @@
             }
         }
 
-        async function loggUt() {
-            const response = await fetch("/logout", {
-                method: "POST"
-            });
-
-            if (response.ok) {
-                alert("Du er nå logget ut.");
-                window.location.href = "/login.html"; // Omdiriger til login-siden
-            } else {
-                alert("Noe gikk galt under utlogging.");
-            }
-        }
     </script>
 </head>
 <body>
-    <h1>Logg inn</h1>
-    <form onsubmit="loggInn(event)">
-        <label for="Brukernavn">Brukernavn:</label>
-        <input type="text" id="Brukernavn" name="Brukernavn" required><br>
+    <div>
+        <h1>Logg inn</h1>
+        <form onsubmit="loggInn(event)">
+            <label for="Brukernavn">Brukernavn:</label>
+            <input type="text" id="Brukernavn" name="Brukernavn" required><br>
 
-        <label for="Passord">Passord:</label>
-        <input type="password" id="Passord" name="Passord" required><br>
+            <label for="Passord">Passord:</label>
+            <input type="password" id="Passord" name="Passord" required><br>
 
-        <button type="submit">Logg inn</button>
-    </form>
-    <p>Har du ikke en konto? <a href="/leggtilbruker.html">Registrer deg her</a>.</p>
-    <button onclick="loggUt()">Logg ut</button>
+            <button type="submit">Logg inn</button>
+        </form>
+        <p>Har du ikke en konto? <a href="/leggtilbruker.html">Registrer deg her</a>.</p>
+    </div>
 </body>
 </html>

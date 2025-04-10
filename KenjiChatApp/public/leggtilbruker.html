@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Legg til person</title>
+    <link rel="stylesheet" href="Lx2.css">
+    <script>
+        // // Hent postnummer frå serveren og fyll ut <select>-lista
+        // async function hentPostnummer() {
+        //     const response = await fetch("/postnummer");
+        //     const postnummer = await response.json();
+
+        //     const select = document.getElementById("postnummer");
+        //     postnummer.forEach(post => {
+        //         const option = document.createElement("option");
+        //         option.value = post.postnummer;
+        //         option.textContent = `${post.postnummer} - ${post.poststed}`;
+        //         select.appendChild(option);
+        //     });
+        // }
+
+        // // Kall funksjonen når sida blir lasta inn
+        // window.onload = hentPostnummer;  
+
+        async function leggTilPerson(event) {
+            event.preventDefault(); // Forhindre standard form-innsending
+
+            const Brukernavn = document.getElementById("Brukernavn").value;
+            const Passord = document.getElementById("Passord").value;
+            const Epost = document.getElementById("Epost").value;
+            const Telefonnummer = document.getElementById("Telefonnummer").value;
+
+            const response = await fetch("/leggtilperson", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    Brukernavn,
+                    Passord,
+                    Epost,
+                    Telefonnummer
+                })
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        }
+    </script>
+</head>
+<body>
+    <h1>Legg til bruker</h1>
+    <form onsubmit="leggTilPerson(event)">
+        <label for="Brukernavn">Brukernavn:</label>
+        <input type="text" id="Brukernavn" name="Brukernavn" required><br>
+
+        <label for="Passord">Passord:</label>
+        <input type="text" id="Passord" name="Passord" required><br>
+
+        <label for="Epost">Epost:</label>
+        <input type="Epost" id="Epost" name="Epost" required><br>
+
+        <label for="Telefonnummer">Telefonnummer:</label>
+        <input type="Telefonnummer" id="Telefonnummer" name="Telefonnummer" required><br>
+
+        <button type="submit">Legg til bruker</button>
+    </form>
+</body>
+</html>
