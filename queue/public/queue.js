@@ -16,9 +16,9 @@ async function hentPerson() {
 
     // Alternativ for-løkke
     // for (let i = 0; i < data.length; i++) {
-    //     console.log(data[i].registreringsnummer);
+    //     console.log(data[i].navn);
     //     let listeElement = document.createElement("li");
-    //     listeElement.innerText = data[i].registreringsnummer + ": " + data[i].merke + ", " + data[i].modell;
+    //     listeElement.innerText = data[i].navn;
     // }
 }
 
