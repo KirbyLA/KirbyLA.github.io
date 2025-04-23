@@ -8,6 +8,8 @@ const db = new Database("køsystem.db");
 
 const PORT = 3000;
 
+app.use(express.json());
+
 app.use(express.static('public'));
 
 // Eksempel på rute som hentar brukarar frå databasen (besøk http://localhost:3000/personer)
@@ -17,7 +19,7 @@ app.get("/personer", (req, res) => {
 });
 
 app.post("/nyperson", (req, res) => { // sto tidligere async her
-    const navn = req.body;
+    const { navn } = req.body;
     console.log(navn)
     const stmt = db.prepare("INSERT INTO person (navn) VALUES (?)");
     const info = stmt.run(navn);
