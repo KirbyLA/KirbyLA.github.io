@@ -26,7 +26,7 @@ hentPerson();
 
 async function leggTilPerson(event) {
     event.preventDefault(); // Forhindre standard form-innsending
-
+    console.log(event);
     const navn = document.getElementById("navn").value;
     console.log(navn)
     const response = await fetch("/nyperson", {
@@ -41,4 +41,5 @@ async function leggTilPerson(event) {
     console.log(response.body)
     const result = await response.json();
     alert(result.message);
+    location.reload();
 }
