@@ -16,7 +16,7 @@ app.get("/personer", (req, res) => {
     res.json(users);
 });
 
-app.post("/nyperson", async (req, res) => {
+app.post("/nyperson", (req, res) => { // sto tidligere async her
     const navn = req.body;
     console.log(navn)
     const stmt = db.prepare("INSERT INTO person (navn) VALUES (?)");
