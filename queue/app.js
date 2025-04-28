@@ -1,14 +1,13 @@
 // Video med forklaring: https://youtu.be/1ZQJZv1zv1Y
 
 const express = require("express");
-const app = express();
-
 const session = require('express-session');
+const bcrypt = require("bcrypt");
+const Database = require("better-sqlite3");
 const path = require('path');
 
-const Database = require("better-sqlite3");
+const app = express();
 const db = new Database("køsystem.db");
-
 const PORT = 3000;
 
 app.use(express.json());
@@ -33,29 +32,38 @@ app.post("/nyperson", (req, res) => { // sto tidligere async her
     const stmt = db.prepare("INSERT INTO person (navn) VALUES (?)");
     const info = stmt.run(navn);
 
-    res.json({ message: "Ny person lagt til", info });
+    res.json({ message: "Du er nå i køen", info });
 });
 
-//Sikt KI Jo-bjørnarv2 kode \/
-app.post('/login', (req, res) => {
+//Sikt KI Jo-bjørnarv2 kode redigert \/
+app.post('/login', async (req, res) => {
     const { Brukernavn, Passord } = req.body;
 
+    // hasher passordet
+    // const saltRounds = 10;
+    // const hashPassord = await bcrypt.hash(Passord, saltRounds);
+
     // Finn brukeren i databasen
-    const user = db.prepare('SELECT * FROM adminLogin WHERE Brukernavn = ?').get(Brukernavn);
+    const bruker = db.prepare('SELECT * FROM adminLogin WHERE Brukernavn = ?').get(Brukernavn);
 
     // Sjekk om brukeren eksisterer og passordet stemmer
-    if (user && user.password === Passord) {
-        // Lagre brukeren i sesjonen
-        req.session.user = user;
-        res.json({ success: true });
-    } else {
-        res.json({ success: false, message: 'Feil brukernavn eller passord' });
+    if (!bruker) {
+        return res.status(401).json({ message: "Feil brukernavn eller passord" });
     }
+    
+    // const gyldigPassord = await bcrypt.compare(Passord, bruker.Passord);
+    if (!Passord) {
+        return res.status(401).json({ message: 'Feil brukernavn eller passord' });
+    }
+
+    //lagre brukerdata i session
+    req.session.bruker = { id: bruker.Passord, Brukernavn: bruker.Brukernavn};
+    res.json({ message: "Innlogging vellykket!" });
 });
 
 // Middleware for å beskytte admin-ruten
-function authMiddleware(req, res, next) {
-    if (req.session.user) {
+function kreverInnlogging(req, res, next) {
+    if (req.session.bruker) {
         next(); // Brukeren er innlogget, gå videre til neste middleware
     } else {
         res.status(401).send('Du må være innlogget for å få tilgang til dette området.');
@@ -63,10 +71,10 @@ function authMiddleware(req, res, next) {
 }
 
 // Admin-rute som bare er tilgjengelig for innloggede brukere
-app.get('/admin', authMiddleware, (req, res) => {
-    res.send('Velkommen til admin-området');
-});
-//Sikt KI Jo-bjørnarv2 kode /\
+app.get("/admin", kreverInnlogging, (req, res) => {
+    res.sendFile(__dirname + "/admin/admin.html");
+});""
+//Sikt KI Jo-bjørnarv2 kode redigert /\
 
 app.listen(PORT, () => {
     console.log(`Server køyrer: http://localhost:${PORT}`);

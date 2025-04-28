@@ -16,7 +16,7 @@ async function loggInn(event) {
         const result = await response.json();
 
         if (result.success) {
-            alert('Innlogging vellykket!');
+            alert(result.message);
             window.location.href = '/admin'; // Send brukeren til admin-området
         } else {
             alert(result.message);
