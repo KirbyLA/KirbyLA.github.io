@@ -51,8 +51,9 @@ app.post('/login', async (req, res) => {
         return res.status(401).json({ message: "Feil brukernavn eller passord" });
     }
     
+    const brukerPass = db.prepare('SELECT * FROM adminLogin WHERE Passord = ?').get(Passord);
     // const gyldigPassord = await bcrypt.compare(Passord, bruker.Passord);
-    if (!Passord) {
+    if (!brukerPass) {
         return res.status(401).json({ message: 'Feil brukernavn eller passord' });
     }
 
@@ -73,7 +74,7 @@ function kreverInnlogging(req, res, next) {
 // Admin-rute som bare er tilgjengelig for innloggede brukere
 app.get("/admin", kreverInnlogging, (req, res) => {
     res.sendFile(__dirname + "/admin/admin.html");
-});""
+});
 //Sikt KI Jo-bjørnarv2 kode redigert /\
 
 app.listen(PORT, () => {

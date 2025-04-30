@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>køsystem admin siden</title>
     <link rel="stylesheet" href="admin.css">
-    <script src="admin.js" defer></script>
+    <script>
+        async function hentPerson() {
+        const res = await fetch('/personer');
+        const data = await res.json();
+    
+        // For testing
+        console.log(data[0].navn);
+        // console.log(data[1]);
+
+        for (let person of data) {
+            console.log(person.navn);
+            let listeElement = document.createElement("li");
+            listeElement.innerText = person.navn;
+            document.querySelector("#person").appendChild(listeElement);
+        }
+    }
+
+    hentPerson();
+
+    document.querySelector("#logoutButton").addEventListener("click", function() {
+        window.location.href = "../public/index.html";
+    });
+    </script>
 </head>
 <body>
      <h1>Du er nå på admin siden. Her kan du se alle som venter i køen og ta dem av listen ettersom de har fått hjelpen de trenger.</h1>
@@ -13,7 +35,6 @@
         <p id="line">Køen:</p>
         <ol id="person"></ol>
     </div>
-    <br>
     <div>
         <label for="admin">Ferdig?</label><br>
         <button id="logoutButton">Logg ut</button>

@@ -17,7 +17,7 @@ async function loggInn(event) {
 
         if (result.success) {
             alert(result.message);
-            window.location.href = '/admin'; // Send brukeren til admin-området
+            window.location.href = "/admin"; // Send brukeren til admin-området
         } else {
             alert(result.message);
         }
