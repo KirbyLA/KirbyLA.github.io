@@ -5,6 +5,16 @@ html, body {
     color: rgb(240, 240, 240);
 }
 
+
+.roboto-uniquifier {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
 .header { grid-area: header; }
 .ménu { grid-area: ménu; }
 .main { grid-area: main; }
