@@ -14,15 +14,33 @@
         console.log(data[0].navn);
         // console.log(data[1]);
 
+        // shows the list of people in the queue
         for (let person of data) {
             console.log(person.navn);
             let listeElement = document.createElement("li");
             listeElement.innerText = person.navn;
-            document.querySelector("#person").appendChild(listeElement);
+
+            // Create a button for each person to remove them from the list
+            let button = document.createElement("button");
+            button.innerText = "X";
+            button.addEventListener("click", async function removePersonFromList() {
+                const res = await fetch('/slettperson');
+                if (res.ok) {
+                    listeElement.remove();
+                    button.remove();
+                    location.reload(); // Refresh the page to see the updated list
+                } else {
+                    console.log("Failed to delete person:", res.statusText);
+                    location.reload();
+                }
+            });
+            document.querySelector("#person").appendChild(listeElement, button);
+            listeElement.appendChild(button);
         }
     }
 
     hentPerson();
+    removePersonFromList();
 
     document.querySelector("#logoutButton").addEventListener("click", function() {
         window.location.href = "../public/index.html";
