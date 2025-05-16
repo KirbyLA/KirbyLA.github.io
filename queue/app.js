@@ -35,6 +35,15 @@ app.post("/nyperson", (req, res) => { // sto tidligere async her
     res.json({ message: "Du er nå i køen", info });
 });
 
+app.post("/slettperson", (req, res) => {
+    const { id } = req.body;
+    console.log(id)
+    const stmt = db.prepare("DELETE FROM person");
+    const info = stmt.run(id);
+
+    res.json({ message: "Person slettet fra køen", info });
+});
+
 //Sikt KI Jo-bjørnarv2 kode redigert \/
 app.post('/login', async (req, res) => {
     const { Brukernavn, Passord } = req.body;
